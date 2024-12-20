@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Signin = () => {
   const [selected, setSelected] = useState("SAAS");
@@ -59,7 +61,7 @@ const Signin = () => {
 
       {/* Right */}
       <div className="w-full md:w-1/2 bg-[#FAFAFA] flex flex-col items-center justify-center min-h-screen px-4">
-        <div className="shadow-xl bg-white rounded-xl h-auto max-w-full w-[90%] md:w-[600px] p-6">
+        <div className="shadow-xl border-gray-500 bg-white rounded-xl h-auto max-w-full w-[90%] md:w-[600px] p-6">
           <div className="flex flex-col items-center w-full">
             {/* Logo and Title */}
             <div className="flex flex-row items-center gap-2 mb-4">
@@ -137,6 +139,9 @@ const Signin = () => {
           By signing up you agree to the{" "}
           <span className="font-semibold">Privacy Policy</span>.
         </div>
+        <button className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-5 text-sm font-medium">
+        <Link to='/dashboard'> see other page</Link>
+</button>
       </div>
     </div>
   );

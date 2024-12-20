@@ -1,13 +1,24 @@
-import Signin from "./helper/signin"
+import Signin from "./helper/Signin"
 
+import Dashboard from "./helper/Dashboard"
 
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Signin />,
+  },
+  {
+    path: '/dashboard',
+    element: <Dashboard />,
+  },
+]);
 
 function App() {
   return (
     <>
-    <div className=''>
-         <Signin/>
-    </div>
+     <RouterProvider router={router} />
     </>
   )
 }
