@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Dashboard = () => {
-  const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState<number | null>(null);
   const [isSidebarVisible, setSidebarVisible] = useState(false);
   const [button, setButton] = useState("refresh");
 
